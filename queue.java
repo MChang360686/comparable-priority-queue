@@ -15,6 +15,7 @@ class Pair<T> implements Comparable<Pair<T>>{
     T priority;
     T content;
 
+    // Constructor
     public Pair(T priority, T content){
         this.priority = priority;
         this.content = content;
@@ -67,13 +68,16 @@ public class queue<T>{
         //remove item that matches above parameters
     }
 
-    private static void peek(){
+    private Pair peek(){
         //check next FIFO element
+        return queue.get(0);
     }
 
-    private static void view(){
+    private void view(){
         //check whole queue
-
+        for(int i = 0; i < queue.size(); i++) {
+            System.out.print(queue.get(i) + " ");
+        }
     }
 
     //check if empty
@@ -83,8 +87,7 @@ public class queue<T>{
 
     //private priority queue
     private static void newqueue(){
-
-
+        
     }
 
     //print method
